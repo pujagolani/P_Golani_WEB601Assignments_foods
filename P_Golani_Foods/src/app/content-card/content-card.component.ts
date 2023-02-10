@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { ContentList } from '../helper-files/content-list';
+//import { ContentList } from '../helper-files/content-list';
 
 @Component({
   selector: 'app-content-card',
@@ -8,7 +8,7 @@ import { ContentList } from '../helper-files/content-list';
   styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent {
-  myContentList: ContentList = new ContentList();
+ // myContentList: ContentList = new ContentList();
 
   contentItem1: Content = {
     id: 0,
@@ -35,20 +35,20 @@ export class ContentCardComponent {
     creator: 'Creator'
   }
 
-  constructor() {
-    this.myContentList.addFunction(this.contentItem1);
-    this.myContentList.addFunction(this.contentItem2);
-    this.myContentList.addFunction(this.contentItem3);
-    this.myContentList.addFunction(this.contentItem4);
-  }
+  //constructor() {
+  //  this.myContentList.addFunction(this.contentItem1);
+  //  this.myContentList.addFunction(this.contentItem2);
+  //  this.myContentList.addFunction(this.contentItem3);
+  //  this.myContentList.addFunction(this.contentItem4);
+  //}
 
-  displayMyIndex(index: number) {
-    let myItems = this.myContentList.getItems();
+ // displayMyIndex(index: number) {
+  //  let myItems = this.myContentList.getItems();
 
-    if (myItems.length > 0 && index > 0 && index < myItems.length) {
-      return this.myContentList.printIndex(index);
-    } else {
-      alert("NO THAT IS BAD");
-    }
-  }
+  //  if (myItems.length > 0 && index > 0 && index < myItems.length) {
+  //    return this.myContentList.printIndex(index);
+  //  } else {
+  //    alert("NO THAT IS BAD");
+ //   }
+ // }
 }

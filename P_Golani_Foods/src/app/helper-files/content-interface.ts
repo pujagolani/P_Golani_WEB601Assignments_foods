@@ -7,3 +7,4 @@ export interface Content {
   tags?: string[];
   creator: string;
 }
+
