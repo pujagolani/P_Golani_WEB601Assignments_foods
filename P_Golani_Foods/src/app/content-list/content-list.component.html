@@ -1,12 +1,12 @@
 <div class="card-list-container">
-  <div class="card-list" [ngStyle]="{'border': (contentItem.id===1 ? '2px solid black' : '1px solid black')}" *ngFor="let contentItem of contentList">
-    <img class="image" [src]="contentItem.imageURL" alt="image" (click)="displayData(contentItem)" />
-    <div class="text_data">
-      <h1>{{contentItem.title}}</h1>
-      <p class="">{{contentItem.description}}</p>
-      <p>Type : {{contentItem.type}}</p>
-      <h5 class="">Creator : {{contentItem.creator}}</h5>
+    <div class="card-list" [ngStyle]="{'border': (contentItem.id===1 ? '2px solid black' : '1px solid black')}" *ngFor="let contentItem of contentList">
+        <img class="image" [src]="contentItem.imageURL" alt="image" (click)="displayData(contentItem)" />
+        <div class="text_data">
+            <h1>{{contentItem.title}}</h1>
+            <p class="">{{contentItem.description}}</p>
+            <p>Type : {{contentItem.type}}</p>
+            <h5 class="">Creator : {{contentItem.creator}}</h5>
 
-    </div>
-  </div>
+        </div>
+      </div>
 </div>

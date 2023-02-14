@@ -5,8 +5,10 @@
     "\\P_Golani_Foods\\src",
     "\\P_Golani_Foods\\src\\app",
     "\\P_Golani_Foods\\src\\app\\content-card",
-    "\\P_Golani_Foods\\src\\app\\helper-files"
+    "\\P_Golani_Foods\\src\\app\\content-list",
+    "\\P_Golani_Foods\\src\\app\\helper-files",
+    "\\P_Golani_Foods\\src\\assets"
   ],
-  "SelectedNode": "\\P_Golani_Foods\\src\\app\\app.component.spec.ts",
+  "SelectedNode": "\\P_Golani_Foods\\src\\favicon.ico",
   "PreviewInSolutionExplorer": false
 }

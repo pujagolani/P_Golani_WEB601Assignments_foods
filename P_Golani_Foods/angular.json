@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "P_Golani_Foods": {
+    "assignment1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/p-golani-foods",
+            "outputPath": "dist/assignment1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "P_Golani_Foods:build:production"
+              "browserTarget": "assignment1:build:production"
             },
             "development": {
-              "browserTarget": "P_Golani_Foods:build:development"
+              "browserTarget": "assignment1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "P_Golani_Foods:build"
+            "browserTarget": "assignment1:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "0914acd0-bd10-493d-99e7-34400402d9cd"
   }
 }
