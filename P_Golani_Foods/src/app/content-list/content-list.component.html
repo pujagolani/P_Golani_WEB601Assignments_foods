@@ -1,12 +1,93 @@
-<div class="card-list-container">
-    <div class="card-list" [ngStyle]="{'border': (contentItem.id===1 ? '2px solid black' : '1px solid black')}" *ngFor="let contentItem of contentList">
-        <img class="image" [src]="contentItem.imageURL" alt="image" (click)="displayData(contentItem)" />
-        <div class="text_data">
-            <h1>{{contentItem.title}}</h1>
-            <p class="">{{contentItem.description}}</p>
-            <p>Type : {{contentItem.type}}</p>
-            <h5 class="">Creator : {{contentItem.creator}}</h5>
 
+<h1 style="  color: black;  text-align:left">Food Items </h1>
+
+<h1 style="   color: black;  text-align:left">
+  Search Form
+
+
+  <br />
+  <br />
+  <div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title">
+    &nbsp;
+    <button (click)="checkExistence()"> Search </button>
+    <p *ngIf="(searchResults.length === 0 || searchResults.length < 0)" class="search-message red" style="color: red; font-weight: bold; font-size: 25px;">Results not found.</p>
+    <p *ngIf="searchTerm && searchResults.length > 0" class="search-message green" style="color: green; font-weight: bold; font-size: 25px;">A content item with this title exists.</p>
+  </div>
+
+  <ul>
+    <li style="list-style-type: none;" *ngFor="let item of searchResults">{{ item.title }}</li>
+  </ul>
+</h1>
+
+
+  <h2>Content List</h2>
+
+  <h3>No Type</h3>
+  <ul>
+    <li style="list-style-type: none;" *ngFor="let content of contentList | contenttype">
+
+      <div class="content-card" style="width: 30%; padding: 10px; margin: 10px; text-align: center; background-color:pink; color:lightcyan">
+        <h1 class="content-card-header">
+          {{content.title}}
+        </h1>
+        <div class="content-card-body">
+          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p style="font-size:10px">{{ content.description }}</p>
+          <p><strong>Creator:</strong> {{ content.creator }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tag }}</span>
+          </p>
         </div>
       </div>
-</div>
+    </li>
+  </ul>
+
+  <h3>Dessert</h3>
+  <ul>
+    <li style="list-style-type: none;" *ngFor="let content of contentList | contenttype: 'MainCourse'">
+
+      <div class="content-card" style="width: 30%; padding: 10px; margin: 10px; text-align: center; background-color:lightblue; color:antiquewhite">
+        <h1 class="content-card-header">
+          {{content.title}}
+        </h1>
+        <div class="content-card-body">
+          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p style="font-size:10px">{{ content.description }}</p>
+          <p><strong>Creator:</strong> {{ content.creator }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tag }}</span>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <h3>MainCourse</h3>
+  <ul>
+    <li style="list-style-type: none;" *ngFor="let content of contentList | contenttype:'MainCourse'">
+
+      <div class="content-card" style="width: 30%; padding: 10px; margin: 10px; text-align: center; background-color:lightsalmon; color:lightblue">
+        <h1 class="content-card-header">
+          {{content.title}}
+        </h1>
+        <div class="content-card-body">
+          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p style="font-size:10px">{{ content.description }}</p>
+          <p><strong>Creator:</strong> {{ content.creator }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tag }}</span>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+

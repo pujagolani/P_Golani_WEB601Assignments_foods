@@ -2,9 +2,9 @@ export interface Content {
     id: number;
     title: string;
     description: string;
-    imgURL?: string;
+    imageURL?: string;
     type?: string;
-    tags?: string [];
+    tag?: string [];
     creator: string;
 }
 
