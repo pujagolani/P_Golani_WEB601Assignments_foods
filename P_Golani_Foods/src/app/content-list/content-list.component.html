@@ -1,7 +1,7 @@
 
 <h1 style="  color: black;  text-align:left">Food Items </h1>
 
-<h1 style="   color: black;  text-align:left">
+
   Search Form
 
 
@@ -18,7 +18,7 @@
   <ul>
     <li style="list-style-type: none;" *ngFor="let item of searchResults">{{ item.title }}</li>
   </ul>
-</h1>
+
 
 
   <h2>Content List</h2>
@@ -32,13 +32,17 @@
           {{content.title}}
         </h1>
         <div class="content-card-body">
-          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p><img *ngIf="content.imgURL; else defaultImage" [src]="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <ng-template #defaultImage>
+            <img [src]="'https://thumbs.dreamstime.com/z/churros-isolated-white-background-stacked-79122348.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
+          </ng-template>
           <p style="font-size:10px">{{ content.description }}</p>
           <p><strong>Creator:</strong> {{ content.creator }}</p>
-          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p appHoverAffect="underline" style="font-size: 15px"><strong>Type:</strong> {{ content.type }}</p>
           <p>
             <strong>Tags:</strong>
-            <span>{{ content.tag }}</span>
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
+            
           </p>
         </div>
       </div>
@@ -54,13 +58,16 @@
           {{content.title}}
         </h1>
         <div class="content-card-body">
-          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p><img *ngIf="content.imgURL; else defaultImage" [src]="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <ng-template #defaultImage>
+            <img [src]="'https://as2.ftcdn.net/v2/jpg/02/37/83/99/1000_F_237839917_ZjhoF520vETpKFFbXv1bgBGvxzlM9T0Z.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
+          </ng-template>
           <p style="font-size:10px">{{ content.description }}</p>
           <p><strong>Creator:</strong> {{ content.creator }}</p>
-          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p appHoverAffect="underline" style="font-size: 20px"><strong>Type:</strong> {{ content.type }}</p>
           <p>
             <strong>Tags:</strong>
-            <span>{{ content.tag }}</span>
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
           </p>
         </div>
       </div>
@@ -76,13 +83,16 @@
           {{content.title}}
         </h1>
         <div class="content-card-body">
-          <p><img src="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <p><img *ngIf="content.imgURL; else defaultImage" [src]="{{ content.imageURL }}" alt="content image" style="width: 60%" /></p>
+          <ng-template #defaultImage>
+            <img [src]="'https://thumbs.dreamstime.com/z/baklava-sweet-turkish-pastry-closeup-31955869.jpg'" alt="default image" style="width: 70%; border-radius: 100px">
+          </ng-template>
           <p style="font-size:10px">{{ content.description }}</p>
           <p><strong>Creator:</strong> {{ content.creator }}</p>
-          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p appHoverAffect="underline" style="font-size: 20px"><strong>Type:</strong> {{ content.type }}</p>
           <p>
             <strong>Tags:</strong>
-            <span>{{ content.tag }}</span>
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
           </p>
         </div>
       </div>
