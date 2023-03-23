@@ -4,7 +4,9 @@
     "\\P_Golani_Foods",
     "\\P_Golani_Foods\\src",
     "\\P_Golani_Foods\\src\\app",
+    "\\P_Golani_Foods\\src\\app\\content-list",
     "\\P_Golani_Foods\\src\\assets"
   ],
+  "SelectedNode": "\\P_Golani_Foods\\src\\app\\hover-affect.directive.ts",
   "PreviewInSolutionExplorer": false
 }
