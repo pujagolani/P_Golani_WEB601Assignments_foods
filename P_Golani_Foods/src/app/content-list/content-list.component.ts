@@ -1,6 +1,7 @@
 //import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { FoodService } from '../services/food.service';
 
 
 @Component({
@@ -9,7 +10,45 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./Content-list.component.scss'],
 })
 
-export class ContentListComponent implements OnInit {
+export class ContentListComponent {
+  contents: Content[] = [];
+  searchTitle: string = "";
+  titleFound: boolean | null = null;
+  defaultBike: string = '/assets/images/drawBike.jpg';
+
+
+  constructor(private FoodService: FoodService) {
+
+  }
+
+  ngOnInit() {
+    this.FoodService.getFoods().subscribe(foods => this.contents = foods);
+  }
+
+
+  searchByTitle() {
+    const matchingFood = this.contents.find(food => food.title.toLowerCase() === this.searchTitle.toLowerCase());
+    const cardElements = document.querySelectorAll(`div.card`);
+
+    if (matchingFood) {
+      this.titleFound = true;
+
+      cardElements.forEach(card => {
+        if (parseInt(card.id) === matchingFood.id) {
+          card.classList.add('matched');
+        } else {
+          card.classList.remove('matched');
+        }
+      });
+    } else {
+      this.titleFound = false;
+      cardElements.forEach(card => card.classList.remove('matched'));
+    }
+  }
+
+}
+
+/*export class ContentListComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -89,4 +128,6 @@ export class ContentListComponent implements OnInit {
     this.searchResults = this.contentList.filter(item => item.title.toLowerCase().includes(this.searchTerm.toLowerCase()));
     this.searchExists = this.searchResults.length > 0;
   }
-}
+  
+}*/
+

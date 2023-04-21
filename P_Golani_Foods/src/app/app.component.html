@@ -1,3 +1,20 @@
 <div>
   <app-content-list></app-content-list>
 </div>
+<section class="foodById-sec">
+  <div class="idForm">
+    <form (submit)="findFoodById()">
+      <label for="foodId">Enter an ID:</label> <br>
+      <input type="number" min="0" id="foodId" name="foodId" [(ngModel)]="foodId" placeholder="Enter an id">
+      <button>Get Food</button>
+    </form>
+  </div>
+  <div class="oneCard">
+    <app-content-card [food]="oneFoodById" [class]="'oneFood'"></app-content-card>
+  </div>
+</section>
+
+
+<app-message></app-message>
+
+<app-content-list></app-content-list>

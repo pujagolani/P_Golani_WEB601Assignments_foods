@@ -1,4 +1,25 @@
-<p>content-card works!</p>
 
-<!-- {{displayMyIndex(1)}}
-{{displayMyIndex(10)}} -->
+<div [id]="food.id" [ngClass]="['card', class]" appHoverAffect="border">
+
+  <div class="card-img">
+    <div *ngIf="food.imgURL; else defaultImage">
+      <img [src]="food.imgURL" alt={{food.title}} (click)="handleClick(food)">
+    </div>
+    <ng-template #defaultImage>
+      <img [src]="defaultFood" alt={{food.title}} (click)="handleClick(food)">
+    </ng-template>
+  </div>
+
+  <div class="card-body">
+    <h2>{{food.title}}</h2>
+    <p>{{food.description}}</p>
+    <p><strong>Creator:</strong> {{food.creator}}</p>
+    <p *ngIf="food.type" appHoverAffect="underline"><strong>type:</strong> {{food.type}}</p>
+    <p *ngIf="food.tags">
+      <strong>Tags:</strong>
+      <span *ngFor="let tag of food.tags" appHoverAffect="bold">
+        {{tag}},
+      </span>
+    </p>
+  </div>
+</div>
