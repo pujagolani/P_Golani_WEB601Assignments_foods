@@ -11,10 +11,9 @@ export class AddContentDialogComponent {
   newFood: any = {};
 
   constructor(public dialogRef: MatDialogRef<AddContentDialogComponent>) { }
-  addNewBike() {
+  addNewFood() {
     this.newFood = {};
   }
 
-  addNewFood() {
-  }
+  
 }

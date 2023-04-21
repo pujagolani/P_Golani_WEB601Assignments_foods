@@ -11,7 +11,7 @@ import { FoodService } from '../services/food.service';
 export class ContentDetailComponent {
   id: number = 0;
   content: any = {};
-  defaultFood: string = '/assets/images/drawBike.jpg';
+  defaultFood: string = '/assets/images/image.png';
 
   constructor(private route: ActivatedRoute, private FoodService: FoodService) { }
 

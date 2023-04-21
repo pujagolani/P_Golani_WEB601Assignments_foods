@@ -9,8 +9,8 @@ import { Content } from '../helper-files/content-interface';
 export class ContentCardComponent {
   @Input() food: any;
   @Input() class: string = '';
-  defaultBike: string = '/assets/images/image.png';
-  defaultFood: string = "";
+  defaultFood: string = '/assets/image.png';
+ // defaultFood: string = "";
 
   handleClick(content: Content) {
     console.log(`ID: ${content.id}, Title: ${content.title}`);

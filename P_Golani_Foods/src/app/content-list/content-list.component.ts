@@ -14,7 +14,7 @@ export class ContentListComponent {
   contents: Content[] = [];
   searchTitle: string = "";
   titleFound: boolean | null = null;
-  defaultBike: string = '/assets/images/drawBike.jpg';
+  defaultFood: string = '/assets/images/image.png';
   
 
 
