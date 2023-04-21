@@ -1,14 +1,3 @@
-/*import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  title = 'assignment2';
-}
-*/
 import { Component, OnInit } from '@angular/core';
 import { Content } from './helper-files/content-interface';
 import { MessageService } from './services/message.service';
@@ -20,21 +9,10 @@ import { FoodService } from './services/food.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Puja_Food';
-  foodId: number = 8;
-  oneFoodById: any = {};
+  title = 'Food ';
 
   constructor(private FoodService: FoodService) { }
 
-  ngOnInit() {
-    this.findFoodById();
-  }
+  ngOnInit() { }
 
-  findFoodById() {
-    this.FoodService.getFoodById(this.foodId).subscribe((result: any) => {
-      if (typeof result === "object") {
-        this.oneFoodById = result;
-      }
-    });
-  }
 }

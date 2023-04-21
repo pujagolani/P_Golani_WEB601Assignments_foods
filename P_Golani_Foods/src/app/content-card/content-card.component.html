@@ -5,12 +5,12 @@
         <img mat-card-image [src]="food.imgURL" alt={{food.title}} (click)="handleClick(food)">
       </div>
       <ng-template #defaultImage>
-        <img mat-card-image [src]="defaultFood" alt={{food.title}} (click)="handleClick(food)">
+        <img mat-card-image [src]="defaultFood" alt={{food.title}} (click)="handleClick(food) ">
       </ng-template>
     </div>
   </mat-card-header>
 
-  <mat-card-content class="card-body">
+  <mat-card-content class="card-body" style="font-size: large">
     <h2>{{food.title}}</h2>
     <p>{{food.description}}</p>
     <p><strong>Creator:</strong> {{food.creator}}</p>

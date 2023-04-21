@@ -28,7 +28,7 @@
 
   <h1>Main Course</h1>
   <section class="cards">
-    <div *ngFor="let content of contents | contenttype:'Main Course'" appHoverAffect="border">
+    <div *ngFor="let content of contents | contenttype:'Main Course'" appHoverAffect="border" style="float:right">
       <app-content-card [food]="content" [class]="'Main Course'"></app-content-card>
     </div>
   </section>

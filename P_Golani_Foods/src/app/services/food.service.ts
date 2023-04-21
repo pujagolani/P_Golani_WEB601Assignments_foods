@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Content } from '../helper-files/content-interface';
 import { contents } from '../helper-files/ContentDb';
 import { MessageService } from './message.service';
@@ -13,7 +15,7 @@ export class FoodService {
     return of(foods);
   }
   getfoodById(foodId: number) {
-      throw new Error('Method not implemented.');
+    throw new Error('Method not implemented.');
   }
 
   constructor(private MessageService: MessageService) { }
