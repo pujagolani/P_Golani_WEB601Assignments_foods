@@ -10,6 +10,7 @@ export class ContentCardComponent {
   @Input() food: any;
   @Input() class: string = '';
   defaultBike: string = '/assets/images/drawBike.jpg';
+  defaultFood: string = "";
 
   handleClick(content: Content) {
     console.log(`ID: ${content.id}, Title: ${content.title}`);

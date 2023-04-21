@@ -7,9 +7,10 @@
     "\\P_Golani_Foods\\src\\app\\content-card",
     "\\P_Golani_Foods\\src\\app\\content-list",
     "\\P_Golani_Foods\\src\\app\\helper-files",
-    "\\P_Golani_Foods\\src\\app\\Services",
+    "\\P_Golani_Foods\\src\\app\\message",
+    "\\P_Golani_Foods\\src\\app\\services",
     "\\P_Golani_Foods\\src\\assets"
   ],
-  "SelectedNode": "\\P_Golani_Foods\\src\\app\\content-list\\content-list.component.ts",
+  "SelectedNode": "\\P_Golani_Foods\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }
