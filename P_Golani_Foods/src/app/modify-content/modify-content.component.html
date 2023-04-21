@@ -5,17 +5,17 @@
         <form class="newfoodForm" (submit)="addNewFood()">
           
           <div>
-            <label for="title">Title:</label> {{newFood.title}}
+            <label for="title">Title:</label> 
             <input type="text" id="title" name="title" [(ngModel)]="newFood.title">
           </div>
 
           <div>
-            <label for="desc">Description:</label> {{newFood.description}}
+            <label for="desc">Description:</label> 
             <textarea name="description" id="desc" cols="30" rows="4" [(ngModel)]="newFood.description"></textarea>
           </div>
 
           <div>
-            <label for="creator">Creator:</label> {{newFood.creator}}
+            <label for="creator">Creator:</label>
             <input type="text" id="creator" name="creator" [(ngModel)]="newFood.creator">
           </div>
           

@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,13 +34,15 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     MatDialogModule,
     MatFormFieldModule,
     MatCardModule,
     MatTooltipModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

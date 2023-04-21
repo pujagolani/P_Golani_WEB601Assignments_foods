@@ -26,6 +26,7 @@ export class ContentListComponent {
     this.FoodService.getFoods().subscribe(foods => this.contents = foods);
   }
   addNewFood(newFood: Content) {
+    //newFood["id"] = 8;
     this.FoodService.addFood(newFood).subscribe((newFoodFromServer: Content) => {
       this.contents.push(newFoodFromServer);
       this.contents = [...this.contents];
