@@ -10,8 +10,9 @@ export class ModifyContentComponent {
   newFood: any = {};
   @Output() addFoodEvent = new EventEmitter<Content>();
 
-  addNewBike() {
+  addNewFood() {
     this.addFoodEvent.emit(this.newFood);
     this.newFood = {};
   }
+
 }
