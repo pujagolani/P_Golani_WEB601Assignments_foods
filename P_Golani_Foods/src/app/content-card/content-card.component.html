@@ -1,25 +1,28 @@
-
-<div [id]="food.id" [ngClass]="['card', class]" appHoverAffect="border">
-
-  <div class="card-img">
-    <div *ngIf="food.imgURL; else defaultImage">
-      <img [src]="food.imgURL" alt={{food.title}} (click)="handleClick(food)">
+<mat-card [id]="food.id" [ngClass]="['card', class]" appHoverAffect="border">
+  <mat-card-header [matTooltip]="food.title" [matTooltipPosition]="'above'">
+    <div class="card-img">
+      <div *ngIf="food.imgURL; else defaultImage">
+        <img mat-card-image [src]="food.imgURL" alt={{food.title}} (click)="handleClick(food)">
+      </div>
+      <ng-template #defaultImage>
+        <img mat-card-image [src]="defaultFood" alt={{food.title}} (click)="handleClick(food)">
+      </ng-template>
     </div>
-    <ng-template #defaultImage>
-      <img [src]="defaultFood" alt={{food.title}} (click)="handleClick(food)">
-    </ng-template>
-  </div>
+  </mat-card-header>
 
-  <div class="card-body">
+  <mat-card-content class="card-body">
     <h2>{{food.title}}</h2>
     <p>{{food.description}}</p>
     <p><strong>Creator:</strong> {{food.creator}}</p>
-    <p *ngIf="food.type" appHoverAffect="underline"><strong>type:</strong> {{food.type}}</p>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <p *ngIf="food.type" appHoverAffect="underline"><strong>Type:</strong> {{food.type}}</p>
     <p *ngIf="food.tags">
       <strong>Tags:</strong>
       <span *ngFor="let tag of food.tags" appHoverAffect="bold">
         {{tag}},
       </span>
     </p>
-  </div>
-</div>
+  </mat-card-footer>
+</mat-card>

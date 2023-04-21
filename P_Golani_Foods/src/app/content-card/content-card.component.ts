@@ -9,7 +9,7 @@ import { Content } from '../helper-files/content-interface';
 export class ContentCardComponent {
   @Input() food: any;
   @Input() class: string = '';
-  defaultBike: string = '/assets/images/drawBike.jpg';
+  defaultBike: string = '/assets/images/image.png';
   defaultFood: string = "";
 
   handleClick(content: Content) {
