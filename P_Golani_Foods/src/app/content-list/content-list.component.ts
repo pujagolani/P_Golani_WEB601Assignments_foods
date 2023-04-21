@@ -15,6 +15,7 @@ export class ContentListComponent {
   searchTitle: string = "";
   titleFound: boolean | null = null;
   defaultBike: string = '/assets/images/drawBike.jpg';
+  
 
 
   constructor(private FoodService: FoodService) {
@@ -23,6 +24,12 @@ export class ContentListComponent {
 
   ngOnInit() {
     this.FoodService.getFoods().subscribe(foods => this.contents = foods);
+  }
+  addNewFood(newFood: Content) {
+    this.FoodService.addFood(newFood).subscribe((newFoodFromServer: Content) => {
+      this.contents.push(newFoodFromServer);
+      this.contents = [...this.contents];
+    });
   }
 
 

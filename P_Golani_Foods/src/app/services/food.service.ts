@@ -8,6 +8,9 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class FoodService {
+  addFood(newFood: Content) {
+      throw new Error('Method not implemented.');
+  }
   getfoodById(foodId: number) {
       throw new Error('Method not implemented.');
   }
